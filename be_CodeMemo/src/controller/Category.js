@@ -26,7 +26,6 @@ export const CraeteCategory = async (req, res) => {
       return res.status(400).json({ message: "Tên danh mục đã tồn tại" });
     }
     const category = await Category.create(req.body);
-    console.log("category", category);
     res.status(200).json({
       message: "Tạo danh mục thành công",
       data: category,

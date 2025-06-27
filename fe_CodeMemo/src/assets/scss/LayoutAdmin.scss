@@ -1,0 +1,34 @@
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+}
+.admin-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: $color-bg-dark;
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+// .admin-content {
+//   flex: 1;
+//   display: flex;
+//   flex-direction: column;
+// }
+
+.admin-main {
+  margin: 10px 0;
+  flex: 1;
+  background-color: $color-bg-dark;
+}

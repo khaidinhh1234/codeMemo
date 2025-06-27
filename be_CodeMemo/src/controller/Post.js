@@ -2,7 +2,7 @@ import { Post } from "../models/Post";
 
 export const GetPosts = async (req, res) => {
   try {
-    const post = await Post.find({});
+    const post = await Post.find({}).populate("categoryId", "name description");
     if (!post || post.length === 0) {
       return res.status(404).json({ message: "Không có thông tin" });
     }

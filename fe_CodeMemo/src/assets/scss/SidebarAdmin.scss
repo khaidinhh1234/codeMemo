@@ -1,0 +1,39 @@
+@import "./variables.scss";
+.sidebar-admin {
+  width: 290px;
+  height: 500px;
+  background-color: $color-bg-light;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  h2 {
+    color: $color-primary;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  .sidebar-links {
+    margin-bottom: 5px;
+    border-bottom: 1px solid $color-border;
+    padding-bottom: 15px;
+  }
+  a {
+    color: $color-muted;
+    text-decoration: none;
+    padding: 8px 10px;
+    display: block;
+    transition: color 0.2s;
+    font-size: 1.1rem;
+    &.active,
+    &:hover {
+      color: $color-primary;
+      background-color: rgba(59, 130, 246, 0.1);
+      border-radius: 6px;
+    }
+    i {
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
+  }
+}
