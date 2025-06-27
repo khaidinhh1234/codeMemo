@@ -1,0 +1,142 @@
+@import "./variables";
+
+body,
+html {
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+  background-color: $color-bg-dark;
+}
+.admin-header {
+  .admin-content {
+    padding: 1rem;
+    background-color: $color-bg-light;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      .logo-header {
+        width: 200px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          height: 100%;
+          border-radius: 50%;
+        }
+        a {
+          width: 100%;
+          height: 100%;
+          text-decoration: none;
+          color: $color-text;
+          display: flex;
+          align-items: center;
+          font-weight: 600;
+          font-size: 0.8rem;
+        }
+      }
+      .sreach {
+        position: relative;
+        width: 300px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        input {
+          width: 100%;
+          height: 100%;
+          padding-left: 2.5rem;
+          border-radius: 6px;
+          border: none;
+          box-shadow: $shadow-soft;
+          font-size: 1rem;
+          color: $color-bg-dark;
+
+          background-color: $color-muted;
+          &:focus {
+            border: none;
+            outline: none;
+            box-shadow: $shadow-soft;
+          }
+        }
+        i {
+          position: absolute;
+          left: 0.6rem;
+          color: $color-bg-light;
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+
+      justify-content: space-between;
+      gap: 1rem;
+      .icon-header-item {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+
+        cursor: pointer;
+        transition: $transition;
+        &:hover {
+          background-color: $color-muted;
+        }
+        i {
+          font-size: 1.5rem;
+          color: $color-primary;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+          cursor: pointer;
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+  .admin-nav ul {
+    list-style: none;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: $color-bg-light;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    li {
+      margin-right: 2rem;
+      border-right: 2px solid $color-border;
+      padding-right: 1rem;
+      a {
+        text-decoration: none;
+        color: $color-text;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        transition: $transition;
+        font-size: 1.1rem;
+        &:hover {
+          color: $color-primary;
+        }
+        i {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}

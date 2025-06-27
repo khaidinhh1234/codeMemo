@@ -12,8 +12,8 @@ const postSchame = new mongoose.Schema(
     },
     categoryId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Category", // Tham chiếu đến mô hình Category
-      required: true, // Bắt buộc phải có danh mục
+      ref: "Category",
+      required: true,
     },
     subject: {
       type: String,
