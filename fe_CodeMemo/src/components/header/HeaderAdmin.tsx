@@ -1,5 +1,3 @@
-import React from "react";
-
 const HeaderAdmin = () => {
   return (
     <header className="admin-header">

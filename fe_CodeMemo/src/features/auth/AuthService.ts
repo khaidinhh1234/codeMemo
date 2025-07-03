@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
-import { AuthService } from "./../../service/Auth";
+import { AuthService } from "../../service/Auth";
 export const Login = createAsyncThunk("auth/login", async (Data: any) => {
   try {
     const data = await AuthService.Login(Data);
@@ -16,8 +16,8 @@ export const Login = createAsyncThunk("auth/login", async (Data: any) => {
       }, 2000);
       return data;
     }
-    if (data.message) {
-      toast.error(data.error);
+    if (data?.data?.message) {
+      toast.error(data.data.error);
       return;
     }
   } catch (error: any) {
@@ -39,8 +39,8 @@ export const Resgister = createAsyncThunk(
         toast.success(data.data.message);
         return data;
       }
-      if (data.message) {
-        toast.error(data.error);
+      if (data?.data?.message) {
+        toast.error(data?.data?.error);
         return;
       }
     } catch (error: any) {

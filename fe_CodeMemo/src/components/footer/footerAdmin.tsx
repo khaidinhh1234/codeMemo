@@ -1,5 +1,3 @@
-import React from "react";
-
 const FooterAdmin = () => {
   return (
     <footer className="admin-footer">

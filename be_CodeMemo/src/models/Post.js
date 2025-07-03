@@ -5,6 +5,15 @@ const postSchame = new mongoose.Schema(
     title: {
       type: String,
       required: true,
+      maxlength: 250,
+    },
+    photo: {
+      type: String,
+      // required: true,
+    },
+    textarea: {
+      type: String,
+      required: true,
     },
     content: {
       type: String,

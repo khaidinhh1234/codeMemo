@@ -1,0 +1,232 @@
+@use "./variables" as *;
+$colors: rgb(248, 96, 96), $color-accent, rgb(48, 48, 207), rgb(255, 199, 96),
+  purple;
+.container-now {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-bg-light;
+  color: $color-text;
+}
+
+.container-admin {
+  width: 100%;
+  height: auto;
+  background-color: $color-bg-light;
+  color: $color-text;
+  .content-header {
+    h1 {
+      color: $color-primary;
+    }
+    .item {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      border-radius: 8px;
+
+      margin-bottom: 20px;
+
+      h2 {
+        color: $color-primary;
+        margin-bottom: 10px;
+      }
+    }
+    .dashboard-actions {
+      width: 100%;
+      text-align: start;
+      box-shadow: $shadow-soft;
+      background-color: $color-border;
+      padding: 20px;
+      border-bottom: 1px solid $color-border;
+      border-radius: 8px;
+      .item {
+        color: $color-accent;
+        font-size: 2rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+  .dashboard-chart {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: $color-bg-light;
+    color: $color-text;
+    gap: 20px;
+    .dashboard-chart-item {
+      background-color: $color-bg-dark;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: $shadow-soft;
+      h2 {
+        color: $color-primary;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .survey-box {
+    margin-top: 20px;
+    background-color: #1f2937;
+    border-radius: 8px;
+    padding: 24px;
+    color: white;
+    font-family: sans-serif;
+  }
+
+  .survey-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  .survey-buttons {
+    display: flex;
+    gap: 8px;
+  }
+
+  .export-btn {
+    background-color: #2563eb;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .export-btn:hover {
+    background-color: #1d4ed8;
+  }
+
+  .survey-filters {
+    margin-bottom: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .survey-input,
+  .survey-select {
+    background-color: #374151;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+  }
+
+  .survey-input:focus,
+  .survey-select:focus {
+    box-shadow: 0 0 0 2px #3b82f6;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .survey-table {
+    width: 100%;
+    white-space: nowrap;
+    border-collapse: collapse;
+  }
+
+  .survey-table th {
+    text-align: left;
+    padding: 12px 16px;
+    background-color: #374151;
+  }
+
+  .survey-table td {
+    padding: 12px 16px;
+  }
+
+  .survey-table tbody tr:hover {
+    background-color: #374151;
+    transition: background-color 0.2s;
+  }
+
+  .survey-footer {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #9ca3af;
+    font-size: 14px;
+  }
+
+  .page-controls {
+    display: flex;
+    gap: 8px;
+  }
+
+  .page-btn {
+    padding: 4px 12px;
+    border-radius: 6px;
+    background-color: #374151;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .page-btn:hover {
+    background-color: #4b5563;
+  }
+
+  .page-btn.active {
+    background-color: #2563eb;
+  }
+
+  .view-btn {
+    color: #3b82f6;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .view-btn:hover {
+    color: #60a5fa;
+  }
+}
+.edit-btn {
+  background-color: #3b82f6;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-right: 8px;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-atyle: none;
+  overflow: auto;
+  height: 100%;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
