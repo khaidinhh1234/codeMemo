@@ -44,15 +44,19 @@ const TableCustomer: React.FC<TableCustomerProps> = ({
               {data && data.length > 0 ? (
                 data?.map((item: any, rowIndex: number) => (
                   <tr key={rowIndex}>
-                    {columns?.map((column: any, colIndex: number) => (
-                      <td key={colIndex}>
-                        {column.render
-                          ? column.render(item[column.field], item, rowIndex)
-                          : column.field
-                          ? item[column.field]
-                          : ""}
-                      </td>
-                    ))}
+                    {columns?.map((column: any, colIndex: number) => {
+                      const text = item[column.field];
+                      const record = item;
+                      return (
+                        <td key={colIndex}>
+                          {column.render
+                            ? column.render(...[text, record, rowIndex])
+                            : column.field
+                            ? text
+                            : ""}
+                        </td>
+                      );
+                    })}
                   </tr>
                 ))
               ) : (

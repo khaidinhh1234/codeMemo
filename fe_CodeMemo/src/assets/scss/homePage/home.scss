@@ -1,0 +1,290 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #18191a;
+  color: #e4e6eb;
+}
+.fb-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #242526;
+  padding: 6px 16px;
+  color: white;
+  height: 56px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid #3a3b3c;
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .header-left {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background-color: #3a3b3c;
+      padding: 6px 12px;
+      border-radius: 999px;
+
+      i {
+        color: #b0b3b8;
+        margin-right: 8px;
+      }
+
+      input {
+        background: none;
+        border: none;
+        outline: none;
+        color: white;
+        width: 200px;
+        padding: 5px 0;
+
+        &::placeholder {
+          color: #b0b3b8;
+        }
+      }
+    }
+  }
+
+  .header-center {
+    width: 50%;
+    display: flex;
+    gap: 30px;
+
+    .icon {
+      font-size: 22px;
+      padding: 10px 50px;
+      cursor: pointer;
+      color: #b0b3b8;
+
+      &.active {
+        color: #1877f2;
+        background: none;
+        border-bottom: 2px solid #1877f2;
+      }
+
+      &:not(.active):hover {
+        background-color: #3a3b3c;
+        border-bottom: 2px solid #3a3b3c;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .header-right {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .circle {
+      background-color: #3a3b3c;
+      padding: 10px 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 16px;
+
+      &:hover {
+        background-color: #4e4f50;
+      }
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      cursor: pointer;
+    }
+  }
+}
+
+.fb-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+// MAIN 3 CỘT
+.main {
+  display: flex;
+  flex: 1;
+  padding: 15px 20px;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+// SIDEBAR
+.sidebar {
+  width: 18%;
+  background-color: #242526;
+  border-radius: 10px;
+  padding: 15px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 12px;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 8px;
+
+      &:hover {
+        background-color: #3a3b3c;
+      }
+    }
+  }
+}
+
+// FEED
+.feed {
+  width: 40%;
+  margin: 0 auto;
+
+  .create-post {
+    background-color: #242526;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    input {
+      width: 100%;
+      padding: 10px 15px;
+      border-radius: 20px;
+      border: none;
+      background-color: #3a3b3c;
+      color: white;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 10px;
+
+      button {
+        background: none;
+        border: none;
+        color: #2e89ff;
+        cursor: pointer;
+        font-size: 14px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .post {
+    background-color: #242526;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+
+    &__header {
+      display: flex;
+      gap: 10px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      .info {
+        .name .follow {
+          color: #2e89ff;
+          cursor: pointer;
+          text-decoration: none;
+          margin: 0 7px;
+          font-size: 14px;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        .meta {
+          color: #b0b3b8;
+          font-size: 14px;
+        }
+      }
+    }
+    &__content {
+      width: 100%;
+      margin-bottom: 10px;
+      img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+    }
+    &__text {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      margin-bottom: 10px;
+      img {
+        width: 100%;
+        border-radius: 100%;
+        margin-bottom: 10px;
+      }
+    }
+    &__image {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+// RIGHTBAR
+.rightbar {
+  width: 18%;
+  background-color: #242526;
+  border-radius: 10px;
+  padding: 15px;
+
+  h4 {
+    margin-bottom: 10px;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .contacts ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 8px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

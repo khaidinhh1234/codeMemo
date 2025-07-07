@@ -8,13 +8,13 @@ import Category from "../pages/Admin/Category/Category";
 import User from "../pages/Admin/User/User";
 import UpdateNow from "../pages/Admin/UpdateNow/UpdateNow";
 import Notfound from "../pages/Admin/NotFound/Notfound";
+import HomePage from "../pages/User/HomePage";
 
 const Router = () => {
   return (
     <Routes>
       <Route path="/login" element={<Auth login="login" />} />
       <Route path="/register" element={<Auth />} />
-      <Route path="/" element={<LayoutUser />} />
       <Route path="/admin" element={<LayoutAdmin />}>
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="post" element={<Post />} />
@@ -23,6 +23,10 @@ const Router = () => {
         <Route path="settings" element={<h1>Settings</h1>} />
         <Route path="update" element={<UpdateNow />} />
         <Route path="*" element={<Notfound />} />
+      </Route>
+      <Route path="*" element={<Notfound />} />
+      <Route path="/" element={<LayoutUser />}>
+        <Route index element={<HomePage />} />
       </Route>
     </Routes>
   );
