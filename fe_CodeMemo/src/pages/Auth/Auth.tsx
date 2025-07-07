@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import type { AppDispatch } from "../../store/store";
 import { Login, Resgister } from "../../features/auth/AuthService";
-import { errors } from "./../../../node_modules/immer/src/utils/errors";
 import { toast } from "react-toastify";
 type AuthProps = {
   login?: string;
