@@ -35,7 +35,11 @@ const postSchame = new mongoose.Schema(
     author: {
       type: String,
     },
-
+    status: {
+      type: String,
+      enum: ["0", "1", "2"], // Trạng thái bài viết
+      default: "0", // 0: Chưa duyệt, 1: Đã duyệt, 2: Từ chối
+    },
     views: { type: Number, default: 0 }, // Số lượt xem bài viết
 
     likes: { type: Number, default: 0 }, // Số lượt thích (nếu muốn sau này thêm)

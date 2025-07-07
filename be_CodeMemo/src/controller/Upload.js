@@ -26,7 +26,7 @@ export const UploadImage = async (req, res) => {
 
 export const GetImage = async (req, res) => {
   try {
-    const images = await Upload.find();
+    const images = await Upload.find().sort({ _id: -1 });
     if (!images || images.length === 0) {
       return res.status(404).json({ message: "No images found" });
     }
